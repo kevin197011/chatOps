@@ -1,0 +1,1 @@
+chatOps: bundle exec lita
