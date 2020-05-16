@@ -4,7 +4,7 @@ module Lita
   # module-level
   module Handlers
     # class-level
-    class K8s < Handler
+    class DevOps < Handler
       route(/bot\s+ping/, :ping)
 
       def ping(response)

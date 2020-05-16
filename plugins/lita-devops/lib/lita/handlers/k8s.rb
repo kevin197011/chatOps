@@ -6,7 +6,7 @@ module Lita
   # module-level
   module Handlers
     # class-level
-    class K8s < Handler
+    class DevOps < Handler
       route(/bot\s+k8s\s+nodes/, :show_nodes)
       route(/bot\s+k8s\s+namespaces/, :show_namespaces)
 

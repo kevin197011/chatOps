@@ -4,12 +4,12 @@ module Lita
   # module-level
   module Handlers
     # class-level
-    class Ansible < Handler
-      route(%r{^/bot\s+ansible$}i, :version)
-      route(%r{^/bot\s+ansible\s+deploy\s+(.*)$}i, :deploy)
+    class DevOps < Handler
+      route(/^bot\s+ansible$/i, :version)
+      route(/^bot\s+ansible\s+deploy\s+(.*)$/i, :deploy)
 
       def version(response)
-        response.reply('ansible -version')
+        response.reply(system('ansible -version'))
       end
 
       def deploy(response)
